@@ -1,0 +1,24 @@
+{
+	"alloc": {
+		"0xE3bd5c065F2C7CDf94C219F27802A34344C4b5A0": {
+			"balance": "10000"
+		}
+	},
+	"config": {
+		"chainId": 2002,
+		"homesteadBlock": 0,
+		"DAOForkBlock": 0,
+		"DAOForkSupport": true,
+		"eip155Block": 0,
+		"eip158Block": 0,
+		"eip150Block": 0
+	},
+	"difficulty": "0x400",
+	"gasLimit": "0x989680",
+	"nonce": "0x0000000000000042",
+	"mixhash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+	"coinbase": "0x0000000000000000000000000000000000000000",
+	"parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+	"extraData": "",
+	"timestamp": "0x00"
+}
