@@ -143,4 +143,4 @@ A.	When truffle console opens, get the instance of contract using below command
 
 For each transaction that we trigger you will get a receipt from the blockchain network.
 
-<sub>Problem Statement Courtasy - upgrad<sub>
+<sub>Problem Statement Courtesy - upgrad<sub>
