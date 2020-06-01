@@ -1,9 +1,5 @@
 {
-	"alloc": {
-		"0xE3bd5c065F2C7CDf94C219F27802A34344C4b5A0": {
-			"balance": "10000"
-		}
-	},
+	"alloc": {},
 	"config": {
 		"chainId": 2002,
 		"homesteadBlock": 0,

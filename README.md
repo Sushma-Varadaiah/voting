@@ -26,7 +26,7 @@ The smart contracts are written in ***Solidity programming language.*** The deve
 
 ### 1.	Deployment and Testing of Smart Contracts in Remix environment ###
 
-Compile the contract code, and then deploy and run the Contract on a sample blockchain inside the **Remix** (remix.ethereum.org) environment. If there are no syntactical error the Solidity Compiler will compile the file and shows a check mark on it's icon.
+Compile the contract code, and then deploy and run the Contract on a sample blockchain inside the **Remix** [link to Remix!](remix.ethereum.org) environment. If there are no syntactical error the Solidity Compiler will compile the file and shows a check mark on it's icon.
 
 ![2-compiling-solidity.png](smart-contract/images/2-compiling-solidity.png)
 
@@ -71,11 +71,13 @@ An Ethereum network is a blockchain built of multiple nodes. These nodes can exi
 
 To connect to a network, you need to be aware of the chain ID of that network because you can only refer to the network using the network's unique chain ID. After this, you need to become a node for that network. For this, you need to download an Ethereum client on your machine and then connect to the network through that. This is important because you can only connect to a network as an Ethereum client. 
 
-***A.	The `genesis.json` file present in the `votingethereumprivatenetwork` contains all the information needed to create a genesis block for the blockchain network. Run the below command inside `votingethereumprivatenetwork`. This command will create a private chain data for  blockchain.***
+***A.	The `genesis.json` file present in the `votingethereumprivatenetwork` contains all the information needed to create a genesis block for the blockchain network. Run the below command inside `votingethereumprivatenetwork`. This command will create a private chain data for blockchain.***
 
 >	geth --datadir ./datadir init ./genesis.json
 
 The above command will generate the datadir folder.
+
+![1-create-private-chain-data](votingethereumprivatenetwork/images/1-create-private-chain-data.jpg)
 
 ***B.	Start geth client console using below command -***
 
@@ -83,14 +85,22 @@ The above command will generate the datadir folder.
 
 2002 is our network id and port is 8545.
 
+![2-start-geth-client.jpg](votingethereumprivatenetwork/images/2-start-geth-client.jpg)
+
 ***C.	Create eth accounts using below api’s , I have created 2 eth accounts with passwords set as below -***
 
 >	personal.newAccount("account1")
+
 >	personal.newAccount("account2")
+
+When the mining starts we need to unlock the accounts.
+![5-unlock-account.png](votingethereumprivatenetwork/images/5-unlock-account.png)
 
 ***D.	Start the mining process using the below command and keep the mining process running as we have to deploy Voting.sol on to this network.***
 
 >	miner.start()
+
+![3-start-mining.png](votingethereumprivatenetwork/images/3-start-mining.png)
 
 
 ### 3.	Deploying Smart Contracts on a Private Blockchain using Truffle ###
@@ -103,18 +113,29 @@ A.	Compile the contract using the below command
 
 >	truffle compile
 
+![truffle-compile.jpg](votingethereumprivatenetwork/images/truffle-compile.jpg)
+
+
 B.	After the successful compilation, migrate the contract to geth
 
->	truffle migrate –network geth
+>	truffle migrate
+
+![truffle-migration.jpg](votingethereumprivatenetwork/images/truffle-migration.jpg)
+
 
 C.	After successfully migrating contract, open truffle console using below command
 
->	truffle console –network geth
+>	truffle console
 
-D.	When truffle console opens, get the instance of contract using below command
+![truffle-console.jpg](votingethereumprivatenetwork/images/truffle-console.jpg)
+
+
+### 4.	Testing the Smart Contracts on Private Blockchain. ###
+
+A.	When truffle console opens, get the instance of contract using below command
 
 >	let voting = await Voting.deployed()
 
-`voting` instance will have all the methods that was defined in sol file.
+`voting` instance will have all the methods that was defined in sol file. We can call each function that we have defined in the Voting.sol file to carry the voting operations that same way that we have tested on the Remix environment but with the command line.
 
-
+For each transaction that we trigger you will get a receipt from the blockchain network.
