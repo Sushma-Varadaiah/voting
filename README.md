@@ -2,6 +2,8 @@
 
 ## Creating a smart contract to digitalise the election process using Blockchain. ##
 
+### Problem Statement
+
 All the members of the organisation are part of the private blockchain and any member can vote for any other member in the organisation. 
 
 Smart contract in this project can perform the following functionalities:
@@ -19,30 +21,31 @@ Smart contract in this project can perform the following functionalities:
 
 The smart contracts are written in ***Solidity programming language.*** The development and deployment of the voting solidity smart contracts will follow the below stages - 
 
-1.	Deployment and Testing of Smart Contracts in Remix environment.
+1.	Development, Deployment and Testing of Smart Contracts in Remix environment.
 2.	Setting Up a Private Ethereum Blockchain.
 3.	Deploying Smart Contracts on a Private Blockchain using Truffle.
 4.	Testing the Smart Contracts on Private Blockchain.
 
-### 1.	Deployment and Testing of Smart Contracts in Remix environment ###
+### 1.	Development, Deployment and Testing of Smart Contracts in Remix environment ###
 
-Compile the contract code, and then deploy and run the Contract on a sample blockchain inside the **Remix** [link to Remix!](remix.ethereum.org) environment. If there are no syntactical error the Solidity Compiler will compile the file and shows a check mark on it's icon.
+Compile the contract code, and then deploy and run the Contract on a sample blockchain inside the [Remix](remix.ethereum.org) environment. If there are no syntactical error the Solidity Compiler will compile the file and shows a check mark on it's icon.
 
 ![2-compiling-solidity.png](smart-contract/images/2-compiling-solidity.png)
 
 **Deploy and Run Transactions**
-The smart contracts has now been deployed. When you deploy the smart contract that is a contract creation transaction. We can see the logs of this transaction in the Remix console. As you can see the below snapshot the console of the Remix environment shows the receipt of the transaction. Whenever a transaction is executed, committed, mined and put on to the blockhain as a block the receipt will be issued by the blockchain.
+
+The smart contracts has now been deployed. When we deploy the smart contract that is a contract creation transaction. We can see the logs of this transaction in the Remix console. As we can see the below snapshot the console of the Remix environment shows the receipt of the transaction. Whenever a transaction is executed, committed, mined and put on to the blockhain as a block the receipt will be issued by the blockchain.
 
 ![4-deploy-transactions.png](smart-contract/images/4-deploy-transactions.png)
 
-You can see that the smart contract is deployed at a particular address. When you click the arrow button you can also see the various functions that you have written as part of your smart contract. Remix will provide a easy to use user interface where it lists down all of the funtions as clickable buttons.
+We can see that the smart contract is deployed at a particular address. When you click the arrow button you can also see the various functions that you have written as part of your smart contract. Remix will provide a easy to use user interface where it lists down all of the funtions as clickable buttons.
 
-If a function takes input parameters that will be available as an input field next to that function button. For those functions which does not require the input parameter you can just click the button to exexute that function. This is how the transactions will be deployed on to the Blockchain in Remix environment.
+If a function takes input parameters that will be available as an input field next to that function button. For those functions which does not require the input parameter we can just click the button to exexute that function. This is how the transactions will be deployed on to the Blockchain in Remix environment.
 
 **Invoking functions that we have defined as part of the smart contract.**
 
 ***Start the voting process -***
-Function startVoting triggers an event StartVoting, beacuse of that as part of the logs now additional log will get created because of the trigger. The log contains topic,name of the event, various arguments that is passed as part of the event definition.
+Function startVoting triggers an event StartVoting, beacuse of that as additional log will get created because of the trigger. The log contains topic,name of the event, various arguments that is passed as part of the event definition.
 
 ![5-startvoting.png](smart-contract/images/5-startvoting.png)
 
@@ -139,3 +142,5 @@ A.	When truffle console opens, get the instance of contract using below command
 `voting` instance will have all the methods that was defined in sol file. We can call each function that we have defined in the Voting.sol file to carry the voting operations that same way that we have tested on the Remix environment but with the command line.
 
 For each transaction that we trigger you will get a receipt from the blockchain network.
+
+<sub>Problem Statement Courtasy - upgrad<sub>
